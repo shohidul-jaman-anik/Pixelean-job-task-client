@@ -1,0 +1,7 @@
+.mainColor {
+  color: #0f141f;
+}
+.cartComponent {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+}
