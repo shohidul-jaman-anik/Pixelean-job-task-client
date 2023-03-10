@@ -5,3 +5,6 @@
   display: grid;
   grid-template-columns: repeat(4, 1fr);
 }
+.cardProfile {
+  background-color: #2c64e4;
+}

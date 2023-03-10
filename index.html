@@ -15,6 +15,7 @@
     <link rel="stylesheet" href="https://unpkg.com/tailwindcss@2.2.19/dist/tailwind.min.css"/> <!--Replace with your tailwind.css once created-->
     <link href="https://afeld.github.io/emoji-css/emoji.css" rel="stylesheet"> <!--Totally optional :) -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.8.0/Chart.bundle.min.js" integrity="sha256-xKeoJ50pzbUGkpQxDYHD7o7hxe0LaOGeguUidbq6vis=" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 </head>
 
 <body class="bg-gray-800 font-sans leading-normal tracking-normal mt-12">
@@ -23,7 +24,7 @@
     <!--Nav-->
     <nav aria-label="menu nav" class="bg-gray-800 pt-2 md:pt-1 pb-1 px-1 mt-0 h-auto fixed w-full z-20 top-0">
 
-        <div class="flex flex-wrap items-center">
+        <div class="flex flex-wrap">
             <div class="flex flex-shrink md:w-1/3 justify-center md:justify-start text-white">
                 <a href="#" aria-label="Home">
                     SMK LTD
@@ -31,13 +32,40 @@
             </div>
 
 
-            <div class="flex w-full pt-2 content-center justify-between md:w-1/3 md:justify-end">
-                <ul class="list-reset flex justify-between flex-1 md:flex-none items-center">
+            <div class="flex w-full pt-2">
+                <ul class="flex">
                     <li class="flex-1 md:flex-none md:mr-3">
-                        <a class="inline-block py-2 px-4 text-white no-underline" href="#">Dashboard</a>
+                        <a class="inline-block py-2 px-2 text-white no-underline" href="#">Dashboard</a>
                     </li>
                     <li class="flex-1 md:flex-none md:mr-3">
-                        <a class="inline-block text-gray-400 no-underline hover:text-gray-200 hover:text-underline py-2 px-4" href="#">Cargo Gear</a>
+                        <a class="inline-block text-gray-400 no-underline hover:text-gray-200 hover:text-underline py-2 px-2" href="#">Cargo Gear</a>
+                    </li>
+                    <li class="flex-1 md:flex-none md:mr-3">
+                        <a class="inline-block text-gray-400 no-underline hover:text-gray-200 hover:text-underline py-2 px-2" href="#">Breakdown</a>
+                    </li>
+                    <li class="flex-1 md:flex-none md:mr-3">
+                        <a class="inline-block text-gray-400 no-underline hover:text-gray-200 hover:text-underline py-2 px-2" href="#">Daily Reports</a>
+                    </li>
+                    <li class="flex-1 md:flex-none md:mr-3">
+                        <a class="inline-block text-gray-400 no-underline hover:text-gray-200 hover:text-underline py-2 px-2" href="#">Cargo Operation</a>
+                    </li>
+                    <li class="flex-1 md:flex-none md:mr-3">
+                        <a class="inline-block text-gray-400 no-underline hover:text-gray-200 hover:text-underline py-2 px-2" href="#">Bunker</a>
+                    </li>
+                    <li class="flex-1 md:flex-none md:mr-3">
+                        <a class="inline-block text-gray-400 no-underline hover:text-gray-200 hover:text-underline py-2 px-2" href="#">Time Loss</a>
+                    </li>
+                    <li class="flex-1 md:flex-none md:mr-3">
+                        <a class="inline-block text-gray-400 no-underline hover:text-gray-200 hover:text-underline py-2 px-2" href="#">Port Turn Out</a>
+                    </li>
+                    <li class="flex-1 md:flex-none md:mr-3">
+                        <a class="inline-block text-gray-400 no-underline hover:text-gray-200 hover:text-underline py-2 px-2" href="#">Ballast Tank</a>
+                    </li>
+                    <li class="flex-1 md:flex-none md:mr-3">
+                        <a class="inline-block text-gray-400 no-underline hover:text-gray-200 hover:text-underline py-2 px-2" href="#">Demurrage & Despatch</a>
+                    </li>
+                    <li class="flex-1 md:flex-none md:mr-3">
+                        <a class="inline-block text-gray-400 no-underline hover:text-gray-200 hover:text-underline py-2 px-2" href="#">Voyage Summary</a>
                     </li>
                     
                 </ul>
@@ -77,15 +105,17 @@
                     <div class="cartComponent w-full md:w-1/2 xl:w-1/3 p-6">
                         <!--Metric Card-->
                         <div class="bg-white from-green-200 to-green-100   rounded-lg shadow-xl p-5">
-                            <div class="flex flex-row items-center">
+                            <div class="flex flex-row justify-between items-center">
                                 <div class="flex-shrink pr-4">
-                                    <div class="rounded-full p-5 bg-green-600"><i class="fa fa-wallet fa-2x fa-inverse"></i></div>
+                                    <div class="rounded-full p-3 bg-blue-600"><i  class="cardProfile fas fa-ship text-white"></i></div>
                                 </div>
-                            
+                                <div class="text-4xl font-bold">
+                                    12
+                                </div>
                             </div>
                             <div class="">
-                                <h2 class="=">Renewal/Abnormality</h2>
-                               <p class="">Cargo Gear <span class="text-green-500"></p>
+                                <h2 class="font-bold mt-4 ">Renewal/Abnormality</h2>
+                               <p class="font-bold">Cargo Gear <span class="text-green-500"></p>
                             </div>
                         </div>
                         <!--/Metric Card-->
@@ -95,13 +125,13 @@
                         <div class="bg-white from-pink-200 to-pink-100  rounded-lg shadow-xl p-5">
                             <div class="flex flex-row items-center">
                                 <div class="flex-shrink pr-4">
-                                    <div class="rounded-full p-5 bg-pink-600"><i class="fas fa-users fa-2x fa-inverse"></i></div>
+                                    <div class="rounded-full p-3 bg-blue-600 ">💦</div>
                                 </div>
                                 
                             </div>
                             <div class="">
-                                <h2 class="">Total Users</h2>
-                                <p class="">249 <span class="text-pink-500"></p>
+                                <h2 class="font-bold mt-4">Total Users</h2>
+                                <p class="font-bold">249 <span class="text-pink-500"></p>
                             </div>
                         </div>
                         <!--/Metric Card-->
@@ -109,15 +139,17 @@
                     <div class="w-full md:w-1/2 xl:w-1/3 p-6">
                         <!--Metric Card-->
                         <div class="bg-white from-yellow-200 to-yellow-100  rounded-lg shadow-xl p-5">
-                            <div class="flex flex-row items-center">
+                            <div class="flex flex-row justify-between items-center">
                                 <div class="flex-shrink pr-4">
-                                    <div class="rounded-full p-5 bg-yellow-600"><i class="fas fa-user-plus fa-2x fa-inverse"></i></div>
+                                    <div class="rounded-full p-3 bg-blue-600"><i class="fas fa-user-plus fa-2x fa-inverse"></i></div>
                                 </div>
-                               
+                                <div class="text-4xl font-bold">
+                                    5
+                                </div>
                             </div>
                             <div class="">
-                                <h2 class="">Daily Excess</h2>
-                                <p class="">Consumption<span class="text-yellow-600"></p>
+                                <h2 class="font-bold mt-4">Daily Excess</h2>
+                                <p class="font-bold">Consumption<span class="text-yellow-600"></p>
                             </div>
                         </div>
                         <!--/Metric Card-->
@@ -125,15 +157,17 @@
                     <div class="w-full md:w-1/2 xl:w-1/3 p-6">
                         <!--Metric Card-->
                         <div class="bg-white from-blue-200 to-blue-100  rounded-lg shadow-xl p-5">
-                            <div class="flex flex-row items-center">
+                            <div class="flex flex-row justify-between items-center">
                                 <div class="flex-shrink pr-4">
-                                    <div class="rounded-full p-5 bg-blue-600"><i class="fas fa-server fa-2x fa-inverse"></i></div>
+                                    <div class="rounded-full p-3 bg-blue-600"><i class="fas fa-server fa-2x fa-inverse"></i></div>
                                 </div>
-                               
+                                <div class="text-4xl font-bold">
+                                    5
+                                </div>
                             </div>
                             <div class="">
-                                <p class="">Daily Speed</p>
-                                <p class=" ">Underperformance</p>
+                                <p class="font-bold mt-4">Daily Speed</p>
+                                <p class=" font-bold">Underperformance</p>
                             </div>
                         </div>
                         <!--/Metric Card-->
@@ -141,15 +175,17 @@
                     <div class="w-full md:w-1/2 xl:w-1/3 p-6">
                         <!--Metric Card-->
                         <div class="bg-white from-indigo-200 to-indigo-100  rounded-lg shadow-xl p-5">
-                            <div class="flex flex-row items-center">
+                            <div class="flex flex-row justify-between items-center">
                                 <div class="flex-shrink pr-4">
-                                    <div class="rounded-full p-5 bg-indigo-600"><i class="fas fa-tasks fa-2x fa-inverse"></i></div>
+                                    <div class="rounded-full p-3 bg-blue-600"><i class="fas fa-tasks fa-2x fa-inverse"></i></div>
                                 </div>
-                               
+                                <div class="text-4xl font-bold">
+                                    4
+                                </div>
                             </div>
                             <div class="">
-                                <h2 class="">Cargo Loading</h2>
-                                <p class="">Report</p>
+                                <h2 class="font-bold mt-4">Cargo Loading</h2>
+                                <p class="font-bold">Report</p>
                             </div>
                         </div>
                         <!--/Metric Card-->
@@ -159,14 +195,14 @@
                         <div class="bg-white from-red-200 to-red-100  rounded-lg shadow-xl p-5">
                             <div class="flex flex-row items-center">
                                 <div class="flex-shrink pr-4">
-                                    <div class="rounded-full p-5 bg-red-600"><i class="fas fa-inbox fa-2x fa-inverse"></i></div>
+                                    <div class="rounded-full p-3 bg-blue-600">💦</div>
                                 </div>
                                
                             </div>
-                            <div class="flex-1 text-right md:text-center">
-                                <h2 class="">Total Voyage</h2>
-                                <p class="">Excess<span class="text-red-500"></span></p>
-                                <p class=""> 
+                            <div class="flex-1">
+                                <h2 class="font-bold mt-2">Total Voyage</h2>
+                                <p class="font-bold">Excess</p>
+                                <p class="font-bold"> 
                                     Consumption <span class="text-red-500"></p>
                             </div>
                         </div>
@@ -175,15 +211,17 @@
                     <div class="w-full md:w-1/2 xl:w-1/3 p-6">
                         <!--Metric Card-->
                         <div class="bg-white from-red-200 to-red-100  rounded-lg shadow-xl p-5">
-                            <div class="flex flex-row items-center">
+                            <div class="flex flex-row justify-between items-center">
                                 <div class="flex-shrink pr-4">
-                                    <div class="rounded-full p-5 bg-red-600"><i class="fas fa-inbox fa-2x fa-inverse"></i></div>
+                                    <div class="rounded-full p-3 bg-blue-600"><i class="fas fa-inbox fa-2x fa-inverse"></i></div>
                                 </div>
-                               
+                                <div class="text-4xl font-bold">
+                                    11
+                                </div>
                             </div>
-                            <div class="flex-1 text-right md:text-center">
-                                <h2 class="">Cargo Discharge</h2>
-                                <p class="">Report<span class="text-red-500"></p>
+                            <div class="flex-1">
+                                <h2 class="font-bold mt-4">Cargo Discharge</h2>
+                                <p class="font-bold">Report<span class="text-red-500"></p>
                             </div>
                         </div>
                         <!--/Metric Card-->
@@ -191,15 +229,17 @@
                     <div class="w-full md:w-1/2 xl:w-1/3 p-6">
                         <!--Metric Card-->
                         <div class="bg-white from-red-200 to-red-100  rounded-lg shadow-xl p-5">
-                            <div class="flex flex-row items-center">
+                            <div class="flex flex-row justify-between items-center">
                                 <div class="flex-shrink pr-4">
-                                    <div class="rounded-full p-5 bg-red-600"><i class="fas fa-inbox fa-2x fa-inverse"></i></div>
+                                    <div class="rounded-full p-3 bg-blue-600"><i class="fas fa-inbox fa-2x fa-inverse"></i></div>
                                 </div>
-                                
+                                <div class="text-4xl font-bold">
+                                    7
+                                </div>
                             </div>
-                            <div class="flex-1 text-right md:text-center">
-                                <h2 class="">Cargo Discharge</h2>
-                                <p class="">Report<span class="text-red-500"></p>
+                            <div class="flex-1 ">
+                                <h2 class="font-bold mt-4">Cargo Discharge</h2>
+                                <p class="font-bold">Report<span class="text-red-500"></p>
                             </div>
                         </div>
                         <!--/Metric Card-->
@@ -214,7 +254,7 @@
                       <div class="w-full border-b border-gray-300"></div>
                     </div>
                     <div class="relative flex justify-center mx-10">
-                      <span class="mainColor  text-2xl">Cargo Gear</span>
+                      <span class="text-gray-400 font-bold text-2xl">Cargo Gear</span>
                     </div>
                 </div>
 
