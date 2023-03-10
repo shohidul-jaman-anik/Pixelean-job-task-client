@@ -2,9 +2,27 @@
   color: #0f141f;
 }
 .cartComponent {
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
+  display: grid !important;
+  grid-template-columns: repeat(4, 1fr) !important;
+  gap: 15px;
 }
 .cardProfile {
   background-color: #2c64e4;
+}
+.bgImage {
+  background-image: url("/Asset/Group.png");
+  background-repeat: no-repeat;
+}
+.card {
+  width: 16rem;
+  height: 9rem;
+}
+.cardIcon {
+  height: 80%;
+  width: 80%;
+}
+.acrodionHeading {
+  color: white;
+  background-color:  #2E3A54;
+  ;
 }
