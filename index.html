@@ -62,7 +62,7 @@
     <nav aria-label="menu nav" class="bg-gray-800 pt-2 md:pt-1 pb-1 px-1 mt-0 h-auto fixed w-full z-20 top-0">
 
         <div >
-            <div class="flex w-full pt-2">
+            <div class="flex w-full pt-2 navContainer">
                 <ul class="flex">
                     <li class="flex-1 md:flex-none md:mr-3">
                         <a class="inline-block pb-2 px-8 font-bold text-white no-underline text-2xl" href="#">SMK LTD</a>
@@ -70,26 +70,20 @@
                     <li class="flex-1 md:flex-none md:mr-3">
                         <a class="inline-block py-2 px-2 text-white no-underline" href="#">Dashboard</a>
                     </li>
-                    <li class="flex-1 md:flex-none md:mr-3">
-                        <a class="inline-block text-gray-400 no-underline hover:text-gray-200 hover:text-underline py-2 px-2" href="#">Cargo Gear</a>
-                    </li>
-                    <li class="flex-1 md:flex-none md:mr-3">
-                        <a class="inline-block text-gray-400 no-underline hover:text-gray-200 hover:text-underline py-2 px-2" href="#">Breakdown</a>
-                    </li>
-                    <li class="flex-1 md:flex-none md:mr-3">
+                    <li class="flex-1 md:flex-none md:mr-3 ">
                         <a class="inline-block text-gray-400 no-underline hover:text-gray-200 hover:text-underline py-2 px-2" href="#">Daily Reports</a>
                     </li>
-                    <li class="flex-1 md:flex-none md:mr-3">
-                        <a class="inline-block text-gray-400 no-underline hover:text-gray-200 hover:text-underline py-2 px-2" href="#">Cargo Operation</a>
+                    <li class="flex-1 md:flex-none md:mr-3 navRoute">
+                        <a class="inline-block text-gray-400 no-underline hover:text-gray-200 hover:text-underline py-2 px-2 " href="#">Cargo Operation</a>
                     </li>
                     <li class="flex-1 md:flex-none md:mr-3">
                         <a class="inline-block text-gray-400 no-underline hover:text-gray-200 hover:text-underline py-2 px-2" href="#">Bunker</a>
                     </li>
-                    <li class="flex-1 md:flex-none md:mr-3">
+                    <li class="flex-1 md:flex-none md:mr-3 navRoute">
                         <a class="inline-block text-gray-400 no-underline hover:text-gray-200 hover:text-underline py-2 px-2" href="#">Time Loss</a>
                     </li>
                   
-                    <li class="flex-1 md:flex-none md:mr-3">
+                    <li class="flex-1 md:flex-none md:mr-3 navRoute">
                         <a class="inline-block text-gray-400 no-underline hover:text-gray-200 hover:text-underline py-2 px-2" href="#">Voyage Summary</a>
                     </li>
                     
@@ -104,9 +98,9 @@
 
     <div class="flex flex-col md:flex-row">
         <nav aria-label="alternative nav">
-            <div class="bg-gray-800 shadow-xl h-20 fixed bottom-0 mt-12 md:relative md:h-screen z-10 w-full md:w-48 content-center">
+            <div class=" fixed bottom-0 mt-12 md:relative md:h-screen z-10  md:w-48 ">
 
-                <div class="md:mt-12 md:w-48 md:fixed md:left-0 md:top-0 content-center md:content-start text-left justify-between">
+                <div class="md:mt-12 md:w-48 md:fixed md:left-0 md:top-0 content-center md:content-start ">
                     <!-- nested sidebar -->
 
                     <div class='flex max-w-sm w-full mainColor shadow-md rounded-lg overflow-hidden mx-auto'>
@@ -144,7 +138,7 @@
                         </div>
                       </div>
                     
-                        </div>
+                    </div>
                     
                 </div>
 
@@ -153,7 +147,7 @@
         </nav>
         
         <section>
-            <div id="main" class="main-content flex-1 bg-gray-100 mt-12 md:mt-2 pb-24 md:pb-5">
+            <div id="main" class="main-content flex-1  mt-12 md:mt-2 pb-24 md:pb-5 bodyColor">
 
               <h2 class="text-3xl mainColor font-bold p-4">
                 Global Ship Report
@@ -207,7 +201,7 @@
                         <div class="bgImage bg-white from-yellow-200 to-yellow-100  rounded-lg shadow-xl p-5">
                             <div class="flex flex-row justify-between items-center">
                                 <div class="flex-shrink pr-4">
-                                    <div class="rounded-full p-3 bg-blue-600"><i class="fas fa-user-plus fa-2x fa-inverse"></i></div>
+                                    <div class="rounded-full p-3 bg-blue-600"><i class="fas fa-tachometer-alt text-white"></i></div>
                                 </div>
                                 <div class="text-4xl font-bold">
                                     5
@@ -225,7 +219,7 @@
                         <div class="bgImage bg-white from-blue-200 to-blue-100  rounded-lg shadow-xl p-5">
                             <div class="flex flex-row justify-between items-center">
                                 <div class="flex-shrink pr-4">
-                                    <div class="rounded-full p-3 bg-blue-600"><i class="fas fa-server fa-2x fa-inverse"></i></div>
+                                    <div class="rounded-full p-3 bg-blue-600"><i class="fas fa-box-open text-white"></i></div>
                                 </div>
                                 <div class="text-4xl font-bold">
                                     5
@@ -243,7 +237,7 @@
                         <div class="bgImage bg-white from-indigo-200 to-indigo-100  rounded-lg shadow-xl p-5">
                             <div class="flex flex-row justify-between items-center">
                                 <div class="flex-shrink pr-4">
-                                    <div class="rounded-full p-3 bg-blue-600"><i class="fas fa-tasks fa-2x fa-inverse"></i></div>
+                                    <div class="rounded-full p-3 bg-blue-600"><i class="fas fa-box-open text-white"></i></div>
                                 </div>
                                 <div class="text-4xl font-bold">
                                     4
@@ -266,7 +260,7 @@
                                
                             </div>
                             <div class="flex-1">
-                                <h2 class="font-bold mt-2">Total Voyage</h2>
+                                <h2 class="font-bold ">Total Voyage</h2>
                                 <p class="font-bold">Excess</p>
                                 <p class="font-bold"> 
                                     Consumption <span class="text-red-500"></p>
@@ -279,7 +273,7 @@
                         <div class="bgImage bg-white from-red-200 to-red-100  rounded-lg shadow-xl p-5">
                             <div class="flex flex-row justify-between items-center">
                                 <div class="flex-shrink pr-4">
-                                    <div class="rounded-full p-3 bg-blue-600"><i class="fas fa-inbox fa-2x fa-inverse"></i></div>
+                                    <div class="rounded-full p-3 bg-blue-600"><i class="fas fa-fill-drip text-white"></i></div>
                                 </div>
                                 <div class="text-4xl font-bold">
                                     11
@@ -297,7 +291,7 @@
                         <div class="bgImage bg-white from-red-200 to-red-100  rounded-lg shadow-xl p-5">
                             <div class="flex flex-row justify-between items-center">
                                 <div class="flex-shrink pr-4">
-                                    <div class="rounded-full p-3 bg-blue-600"><i class="fas fa-inbox fa-2x fa-inverse "></i></div>
+                                    <div class="rounded-full p-3 bg-blue-600"><i  class="cardProfile fas fa-ship text-white"></i></div>
                                 </div>
                                 <div class="text-4xl font-bold">
                                     7
@@ -336,9 +330,9 @@
 
 
 
-                <div class="flex flex-row flex-wrap flex-grow mt-2">
+                <div class="chartContainer">
 
-                <div class="w-full md:w-1/1 xl:w-1/2 p-6">
+                <div class="firstChart">
                   
                     <div class="bg-white border-transparent rounded-lg shadow-xl">
                         <div class="bg-white from-gray-300 to-gray-100 uppercase text-gray-800 border-b-2 border-gray-300 rounded-tl-lg rounded-tr-lg p-2">
@@ -380,11 +374,8 @@
                   
                 </div>
 
-
-                <div id="chartContainer" ></div>
+                <div id="chartContainer" class="secondChart"></div>
                
-
-
         </section>
 
         

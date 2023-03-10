@@ -23,6 +23,42 @@
 }
 .acrodionHeading {
   color: white;
-  background-color:  #2E3A54;
-  ;
+  background-color: #2e3a54;
+}
+
+.bodyColor {
+  background-color: #f4f8ff;
+}
+
+.chartContainer {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1rem;
+  padding: 1rem;
+}
+
+.firstChart {
+}
+.secondChart {
+}
+
+@media only screen and (max-width: 600px) {
+  .cartComponent {
+    display: grid !important;
+    grid-template-columns: repeat(1, 1fr) !important;
+    gap: 15px;
+  }
+  .chartContainer {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+  }
+  .navContainer ul li a {
+    font-size: xx-small;
+  }
+  .navRoute {
+    display: none;
+  }
+  body {
+    overflow-x: hidden !important; /* Hide horizontal scrollbar */
+  }
 }
