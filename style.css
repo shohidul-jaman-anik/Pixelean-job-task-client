@@ -107,3 +107,25 @@
     scrollbar-width: none;
   }
 }
+
+@media only screen and (min-width: 600px) and (max-width: 768px) {
+  .cartComponent {
+    display: grid !important;
+    grid-template-columns: repeat(2, 1fr) !important;
+    gap: 15px;
+  }
+  .navHead {
+    margin: 0% !important;
+    font-size: medium !important;
+    white-space: nowrap;
+  }.bodyHeader {
+    padding: 0%;
+    margin-top: 18%;
+  }
+  .navlink {
+    font-size: x-small !important;
+    padding: 0px;
+    margin: 0%;
+    margin-top: 12px;
+  }
+}
