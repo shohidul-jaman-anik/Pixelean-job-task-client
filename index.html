@@ -2,185 +2,215 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <title>Pixelean</title>
-    <meta name="author" content="name">
-    <meta name="description" content="description here">
-    <meta name="keywords" content="keywords,here">
+    <meta name="author" content="name" />
+    <meta name="description" content="description here" />
+    <meta name="keywords" content="keywords,here" />
 
-
-     <link rel="stylesheet" href="./style.css">
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css">
-    <link rel="stylesheet" href="https://unpkg.com/tailwindcss@2.2.19/dist/tailwind.min.css"/> <!--Replace with your tailwind.css once created-->
-    <link href="https://afeld.github.io/emoji-css/emoji.css" rel="stylesheet"> <!--Totally optional :) -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.8.0/Chart.bundle.min.js" integrity="sha256-xKeoJ50pzbUGkpQxDYHD7o7hxe0LaOGeguUidbq6vis=" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="./style.css" />
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" />
+    <link rel="stylesheet" href="https://unpkg.com/tailwindcss@2.2.19/dist/tailwind.min.css" />
+    <!--Replace with your tailwind.css once created-->
+    <link href="https://afeld.github.io/emoji-css/emoji.css" rel="stylesheet" />
+    <!--Totally optional :) -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.8.0/Chart.bundle.min.js"
+        integrity="sha256-xKeoJ50pzbUGkpQxDYHD7o7hxe0LaOGeguUidbq6vis=" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/flowbite/1.6.4/flowbite.min.css" rel="stylesheet" />
 
     <script>
         window.onload = function () {
-        
-        var chart = new CanvasJS.Chart("chartContainer", {
-            animationEnabled: true,
-            // exportEnabled: true,
-            title: {
-                text: "Breakdown History"
-            },
-            axisX: {
-                title: "Crane name"
-            },
-            axisY: {
-                title: "Hour",
-                interval: 10,
-            }, 
-            data: [{
-                type: "rangeBar",
-                // showInLegend: true,
-                // yValueFormatString: "$#0.#K",
-                // indexLabel: "{y[#index]}",
-                // legendText: "",
-                // toolTipContent: "<b>{label}</b>: {y[0]} to {y[1]}",
-                dataPoints: [
-                    { x: 10, y:[80, 130], label: "Crane 1" },
-                    { x: 20, y:[70, 120], label: "Crane 2" },
-                    { x: 30, y:[60, 110], label: "Crane 3" }
-                ]
-            }]
-        });
-        chart.render();
-        
-        }
-        </script>
-        
+            var chart = new CanvasJS.Chart("chartContainer", {
+                animationEnabled: true,
+                // exportEnabled: true,
+                title: {
+                    text: "Breakdown History",
+                },
+                axisX: {
+                    title: "Crane name",
+                },
+                axisY: {
+                    title: "Hour",
+                    interval: 10,
+                },
+                data: [
+                    {
+                        type: "rangeBar",
+                        // showInLegend: true,
+                        // yValueFormatString: "$#0.#K",
+                        // indexLabel: "{y[#index]}",
+                        // legendText: "",
+                        // toolTipContent: "<b>{label}</b>: {y[0]} to {y[1]}",
+                        dataPoints: [
+                            { x: 10, y: [80, 130], label: "Crane 1" },
+                            { x: 20, y: [70, 120], label: "Crane 2" },
+                            { x: 30, y: [60, 110], label: "Crane 3" },
+                        ],
+                    },
+                ],
+            });
+            chart.render();
+        };
+    </script>
 </head>
 
-<body class="bg-gray-800 font-sans leading-normal tracking-normal mt-12">
+<body class="bodyColor font-sans leading-normal tracking-normal mt-12">
+    <header>
+        <nav aria-label="menu nav" class="bg-gray-800 pt-2 md:pt-1 pb-1 px-1 mt-0 h-auto fixed w-full z-20 top-0">
 
-<header>
-    <!--Nav-->
-    <nav aria-label="menu nav" class="bg-gray-800 pt-2 md:pt-1 pb-1 px-1 mt-0 h-auto fixed w-full z-20 top-0">
+            <div>
+                <div class="flex w-full pt-2 navContainer">
+                    <ul class="flex">
+                        <p class="text-2xl text-white font-bold mr-28 p-3 navHead">
+                            SMK LTD
+                        </p>
+                        <li class=" navlink">
+                            <a class="inline-block py-2 px-2 text-white no-underline " href="#">Dashboard</a>
+                        </li>
+                        <li class="navRoute py-2">
+                            <a class=" text-gray-400 no-underline hover:text-gray-200 hover:text-underline py-2 px-2"
+                                href="#">Cargo Gear</a>
+                        </li>
+                        <li class="  py-2 navlink">
+                            <a class="text-gray-400 no-underline hover:text-gray-200 hover:text-underline py-2 px-2 "
+                                href="#">Breakdown</a>
+                        </li>
+                        <li class="navRoute py-2">
+                            <a class=" text-gray-400 no-underline hover:text-gray-200 hover:text-underline py-2 px-2"
+                                href="#">Daily Reports</a>
+                        </li>
 
-        <div >
-            <div class="flex w-full pt-2 navContainer">
-                <ul class="flex">
-                    <li class="flex-1 md:flex-none md:mr-3">
-                        <a class="inline-block pb-2 px-8 font-bold text-white no-underline text-2xl" href="#">SMK LTD</a>
-                    </li>
-                    <li class="flex-1 md:flex-none md:mr-3">
-                        <a class="inline-block py-2 px-2 text-white no-underline" href="#">Dashboard</a>
-                    </li>
-                    <li class="flex-1 md:flex-none md:mr-3 ">
-                        <a class="inline-block text-gray-400 no-underline hover:text-gray-200 hover:text-underline py-2 px-2" href="#">Daily Reports</a>
-                    </li>
-                    <li class="flex-1 md:flex-none md:mr-3 navRoute">
-                        <a class="inline-block text-gray-400 no-underline hover:text-gray-200 hover:text-underline py-2 px-2 " href="#">Cargo Operation</a>
-                    </li>
-                    <li class="flex-1 md:flex-none md:mr-3">
-                        <a class="inline-block text-gray-400 no-underline hover:text-gray-200 hover:text-underline py-2 px-2" href="#">Bunker</a>
-                    </li>
-                    <li class="flex-1 md:flex-none md:mr-3 navRoute">
-                        <a class="inline-block text-gray-400 no-underline hover:text-gray-200 hover:text-underline py-2 px-2" href="#">Time Loss</a>
-                    </li>
-                  
-                    <li class="flex-1 md:flex-none md:mr-3 navRoute">
-                        <a class="inline-block text-gray-400 no-underline hover:text-gray-200 hover:text-underline py-2 px-2" href="#">Voyage Summary</a>
-                    </li>
-                    
-                </ul>
-            </div>
-        </div>
-    </nav>
-</header>
+                        <li class="py-2 navlink">
+                            <a class="text-gray-400 no-underline hover:text-gray-200 hover:text-underline py-2 px-2 "
+                                href="#">Bunker</a>
+                        </li>
+                        <li class=" navRoute py-2">
+                            <a class="text-gray-400 no-underline hover:text-gray-200 hover:text-underline py-2 px-2"
+                                href="#">Time Loss</a>
+                        </li>
 
+                        <li class=" navRoute py-2">
+                            <a class="text-gray-400 no-underline  hover:text-gray-200 hover:text-underline px-2"
+                                href="#">Voyage Summary</a>
+                        </li>
 
-<main>
-
-    <div class="flex flex-col md:flex-row">
-        <nav aria-label="alternative nav">
-            <div class=" mt-12 md:relative md:h-screen z-10  md:w-48 ">
-
-                <div class="md:mt-12 md:w-48 md:fixed md:left-0 md:top-0 content-center md:content-start ">
-                    <!-- nested sidebar -->
-
-                    <div class='flex max-w-sm w-full mainColor shadow-md rounded-lg overflow-hidden mx-auto'>
-     
-    
-                        <div class="mainColor  mx-auto my-2"> 
-                   
-                        <button class=" border-light-blue-500 accordion   acrodionHeading hover:text-blue-500 p-3 my-4 rounded-1xl">
-                            <img src="" alt="">
-                            <span>Anisul Haque </span>
-                        </button>
-                        <div class="panel acrodionHeading  rounded-2xl py-1">
-                            <div>
-                                <h1 class="pl-4 text-xs"> Jahan Brothers 2</h1>
-                                <p class="text-gray-300 pl-4 text-xs"> Streaming</p>
-                            </div>
-                        </div>
-                        
-                        <button class="border-solid border-light-blue-500 text-left accordion p-3 acrodionHeading my-4 hover:text-blue-500  rounded-1xl">
-                            <img src="" alt="">
-                            <span>Anisul Haque </span>
-                        </button>
-                        <div class="panel acrodionHeading  rounded-2xl py-1">
-                            <h1 class="pl-4 text-xs">Jahan Brothers 2 </h1>
-                            <p class="text-gray-300 pl-4 text-xs">Streaming</p>
-                        </div>
-                        
-                        <button class="border-solid border-light-blue-500 text-left accordion p-3 acrodionHeading my-4 hover:text-blue-500 rounded-1xl">
-                            <img src="" alt="">
-                            <span>Anisul Haque </span>
-                        </button>
-                          <div class="panel acrodionHeading rounded-2xl py-1">
-                            <h1 class="pl-4 text-xs">Jahan Brothers 2 </h1>
-                            <p class="text-gray-300 pl-4 text-xs">Streaming</p>
-                        </div>
-                      </div>
-                    
-                    </div>
-                    
+                    </ul>
                 </div>
-
-
             </div>
         </nav>
-        
-        <section>
-            <div id="main" class="main-content flex-1  mt-12 md:mt-2 pb-24 md:pb-5 bodyColor">
+    </header>
 
-              <h2 class="text-3xl mainColor font-bold px-4 py-2">
-                Global Ship Report
-              </h2>
-              
+
+    <button data-drawer-target="logo-sidebar" data-drawer-toggle="logo-sidebar" aria-controls="logo-sidebar"
+        type="button"
+        class="inline-flex items-center p-2 mt-8 ml-3 text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600 bg-gray-200 ">
+        <span class="sr-only">Open sidebar</span>
+        <svg class="w-6 h-6" aria-hidden="true" fill="currentColor" viewBox="0 0 20 20"
+            xmlns="http://www.w3.org/2000/svg">
+            <path clip-rule="evenodd" fill-rule="evenodd"
+                d="M2 4.75A.75.75 0 012.75 4h14.5a.75.75 0 010 1.5H2.75A.75.75 0 012 4.75zm0 10.5a.75.75 0 01.75-.75h7.5a.75.75 0 010 1.5h-7.5a.75.75 0 01-.75-.75zM2 10a.75.75 0 01.75-.75h14.5a.75.75 0 010 1.5H2.75A.75.75 0 012 10z">
+            </path>
+        </svg>
+    </button>
+
+
+
+    <aside id="logo-sidebar"
+        class="fixed  top-0 left-0  z-40 w-56 h-screen transition-transform -translate-x-full sm:translate-x-0"
+        aria-label="Sidebar">
+
+
+        <div class="h-full bg-gray-800 mt-20 overflow-y-auto bg-gray-50 dark:bg-gray-800">
+
+            <!-- For asidebar -->
+            <button class="globalBtn ">
+                <i class="fas fa-globe-americas pr-3"></i>
+                <span class="pr-10">Global</span>
+            </button>
+
+            <p class="text-white mt-2 ml-2">Individual Ship</p>
+
+            <div class='flex max-w-sm w-full mainColor rounded-lg overflow-hidden'>
+                <div class="mainColor ml-2">
+                    <button
+                        class="border-solid border-light-blue-500 text-left accordion acrodionHeading my-3 hover:text-blue-500  rounded-2xl flex items-center justify-between py-4">
+                        <img class="accrodianImg" src="./Asset/Ellipse 19.png" alt="">
+                        <span class="pr-12">Anisul Haque </span>
+                    </button>
+                    <div class="panel acrodionHeading  rounded-2xl py-2 ml-4">
+                        <h1 class="pl-4 text-xs">Jahan Brothers 2 </h1>
+                        <p class="text-gray-300 pl-4 text-xs">Streaming</p>
+                    </div>
+                    <button
+                        class="border-solid border-light-blue-500 text-left accordion acrodionHeading my-3 hover:text-blue-500  rounded-2xl flex items-center justify-between py-4">
+                        <img class="accrodianImg" src="./Asset/Ellipse 19.png" alt="">
+                        <span class="pr-12">Anisul Haque </span>
+                    </button>
+                    <div class="panel acrodionHeading  rounded-2xl py-2 ml-4">
+                        <h1 class="pl-4 text-xs">Jahan Brothers 2 </h1>
+                        <p class="text-gray-300 pl-4 text-xs">Streaming</p>
+                    </div>
+
+                    <button
+                        class="border-solid border-light-blue-500 text-left accordion acrodionHeading my-3 hover:text-blue-500  rounded-2xl flex items-center justify-between py-4 ">
+                        <img class="accrodianImg" src="./Asset/Ellipse 19.png" alt="">
+                        <span class="pr-12">Anisul Haque </span>
+                    </button>
+                    <div class="panel acrodionHeading  rounded-2xl py-2 ml-4">
+                        <h1 class="pl-4 text-xs">Jahan Brothers 2 </h1>
+                        <p class="text-gray-300 pl-4 text-xs">Streaming</p>
+                    </div>
+
+
+                </div>
+
+            </div>
+        </div>
+    </aside>
+
+    <div class=" sm:ml-56">
+
+        <section>
+            <div id="main" class="flex-1  mt-12 md:mt-2  md:pb-5 bodyColor">
+
+
+                <h2 class="text-3xl mainColor font-bold px-4 py-2 lg:mt-24  bodyHeader">
+                    Global Ship Report
+                </h2>
+
 
                 <div class="cartComponent gap-x-5 gap-y-8 p-5">
-                    <div  class="card">
-                        <!--Metric Card-->
+                    <div class="card">
+
                         <div class="bgImage bg-white from-green-200 to-green-100   rounded-lg shadow-xl p-5">
                             <div class="flex flex-row justify-between items-center">
                                 <div class="flex-shrink pr-4">
-                                    <div class="rounded-full p-3 bg-blue-600"><i  class="cardProfile fas fa-ship text-white"></i></div>
+                                    <div class="rounded-full p-3 bg-blue-600"><i
+                                            class="cardProfile fas fa-ship text-white"></i></div>
                                 </div>
                                 <div class="text-4xl font-bold">
                                     12
                                 </div>
                             </div>
                             <div class="">
-                                <h2 class="font-bold mt-4 ">Renewal/Abnormality</h2>
-                               <p class="font-bold">Cargo Gear <span class="text-green-500"></p>
+                                <h2 class="font-bold mt-4 ">
+                                    Renewal Abnormality</h2>
+                                <p class="font-bold">Cargo Gear <span class="text-green-500"></p>
                             </div>
                         </div>
-                        <!--/Metric Card-->
+
                     </div>
                     <div class="card">
-                        <!--Metric Card-->
+
                         <div class="bgImage bg-white from-pink-200 to-pink-100  rounded-lg shadow-xl p-5">
                             <div class="flex flex-row items-center">
                                 <div class="flex-shrink pr-4">
                                     <div class="rounded-full p-3 bg-blue-600 ">💦</div>
                                 </div>
-                                
+
                             </div>
                             <div class="flex justify-between">
                                 <div class="">
@@ -194,14 +224,15 @@
                                 </div>
                             </div>
                         </div>
-                        <!--/Metric Card-->
+
                     </div>
                     <div class="card">
-                        <!--Metric Card-->
+
                         <div class="bgImage bg-white from-yellow-200 to-yellow-100  rounded-lg shadow-xl p-5">
                             <div class="flex flex-row justify-between items-center">
                                 <div class="flex-shrink pr-4">
-                                    <div class="rounded-full p-3 bg-blue-600"><i class="fas fa-tachometer-alt text-white"></i></div>
+                                    <div class="rounded-full p-3 bg-blue-600"><i
+                                            class="fas fa-tachometer-alt text-white"></i></div>
                                 </div>
                                 <div class="text-4xl font-bold">
                                     5
@@ -212,14 +243,15 @@
                                 <p class="font-bold">Consumption<span class="text-yellow-600"></p>
                             </div>
                         </div>
-                        <!--/Metric Card-->
+
                     </div>
                     <div class="card">
-                        <!--Metric Card-->
+
                         <div class="bgImage bg-white from-blue-200 to-blue-100  rounded-lg shadow-xl p-5">
                             <div class="flex flex-row justify-between items-center">
                                 <div class="flex-shrink pr-4">
-                                    <div class="rounded-full p-3 bg-blue-600"><i class="fas fa-box-open text-white"></i></div>
+                                    <div class="rounded-full p-3 bg-blue-600"><i class="fas fa-box-open text-white"></i>
+                                    </div>
                                 </div>
                                 <div class="text-4xl font-bold">
                                     5
@@ -230,14 +262,15 @@
                                 <p class=" font-bold">Underperformance</p>
                             </div>
                         </div>
-                        <!--/Metric Card-->
+
                     </div>
                     <div class="card">
-                        <!--Metric Card-->
+
                         <div class="bgImage bg-white from-indigo-200 to-indigo-100  rounded-lg shadow-xl p-5">
                             <div class="flex flex-row justify-between items-center">
                                 <div class="flex-shrink pr-4">
-                                    <div class="rounded-full p-3 bg-blue-600"><i class="fas fa-box-open text-white"></i></div>
+                                    <div class="rounded-full p-3 bg-blue-600"><i class="fas fa-box-open text-white"></i>
+                                    </div>
                                 </div>
                                 <div class="text-4xl font-bold">
                                     4
@@ -248,32 +281,33 @@
                                 <p class="font-bold">Report</p>
                             </div>
                         </div>
-                        <!--/Metric Card-->
+
                     </div>
                     <div class="card">
-                        <!--Metric Card-->
+
                         <div class="bgImage bg-white from-red-200 to-red-100  rounded-lg shadow-xl p-5">
                             <div class="flex flex-row items-center">
                                 <div class="flex-shrink pr-4">
                                     <div class="rounded-full p-3 bg-blue-600">💦</div>
                                 </div>
-                               
+
                             </div>
                             <div class="flex-1">
                                 <h2 class="font-bold ">Total Voyage</h2>
                                 <p class="font-bold">Excess</p>
-                                <p class="font-bold"> 
+                                <p class="font-bold">
                                     Consumption <span class="text-red-500"></p>
                             </div>
                         </div>
-                        <!--/Metric Card-->
+
                     </div>
                     <div class="card">
-                        <!--Metric Card-->
+
                         <div class="bgImage bg-white from-red-200 to-red-100  rounded-lg shadow-xl p-5">
                             <div class="flex flex-row justify-between items-center">
                                 <div class="flex-shrink pr-4">
-                                    <div class="rounded-full p-3 bg-blue-600"><i class="fas fa-fill-drip text-white"></i></div>
+                                    <div class="rounded-full p-3 bg-blue-600"><i
+                                            class="fas fa-fill-drip text-white"></i></div>
                                 </div>
                                 <div class="text-4xl font-bold">
                                     11
@@ -284,161 +318,158 @@
                                 <p class="font-bold">Report<span class="text-red-500"></p>
                             </div>
                         </div>
-                        <!--/Metric Card-->
+
                     </div>
                     <div class="card">
-                        <!--Metric Card-->
+
                         <div class="bgImage bg-white from-red-200 to-red-100  rounded-lg shadow-xl p-5">
                             <div class="flex flex-row justify-between items-center">
                                 <div class="flex-shrink pr-4">
-                                    <div class="rounded-full p-3 bg-blue-600"><i  class="cardProfile fas fa-ship text-white"></i></div>
+                                    <div class="rounded-full p-3 bg-blue-600"><i
+                                            class="cardProfile fas fa-ship text-white"></i></div>
                                 </div>
                                 <div class="text-4xl font-bold">
                                     7
                                 </div>
                             </div>
-                           <div class="flex justify-between">
-                            <div class="flex-1 ">
-                                <h2 class="font-bold">Cargo Discharge</h2>
-                                <p class="font-bold">Report<span class="text-red-500"></p>
+                            <div class="flex justify-between">
+                                <div class="flex-1 ">
+                                    <h2 class="font-bold">Cargo Discharge</h2>
+                                    <p class="font-bold">Report<span class="text-red-500"></p>
+                                </div>
+                                <div class="mt-4">
+                                    <p class="text-xs">VLSFO: 10 MT</p>
+                                    <p class="text-xs">LSMGO: 30 MT</p>
+                                    <p class="text-xs">MDO: 12MT</p>
+                                </div>
                             </div>
-                            <div class="mt-4">
-                                <p class="text-xs">VLSFO: 10 MT</p>
-                                <p class="text-xs">LSMGO: 30 MT</p>
-                                <p class="text-xs">MDO: 12MT</p>
-                            </div>
-                           </div>
                         </div>
-                        <!--/Metric Card-->
+
                     </div>
                 </div>
 
 
 
-                
-             <section class="mt-10">
-                <div class="relative my-4 mx-5">
-                    <div class="absolute inset-0 flex items-center">
-                      <div class="w-full border-b border-gray-300"></div>
+
+                <section class="mt-10">
+                    <div class="relative my-4 mx-5">
+                        <div class="absolute inset-0 flex items-center">
+                            <div class="w-full border-b border-gray-300"></div>
+                        </div>
+
+                        <div class="relative flex justify-center mx-10">
+                            <span class="text-gray-400 font-bold text-2xl">Cargo Gear</span>
+                        </div>
                     </div>
-                    
-                    <div class="relative flex justify-center mx-10">
-                      <span class="text-gray-400 font-bold text-2xl">Cargo Gear</span>
-                    </div>
-                </div>
-             </section>
+                </section>
 
 
 
                 <div class="chartContainer">
 
-                <div class="firstChart">
-                  
-                    <div class="bg-white border-transparent rounded-lg shadow-xl">
-                        <div class="bg-white from-gray-300 to-gray-100 uppercase text-gray-800 border-b-2 border-gray-300 rounded-tl-lg rounded-tr-lg p-2">
-                            <h class="font-bold uppercase text-gray-600">Graph</h>
-                        </div>
-                        <div class="p-5">
-                            <canvas id="chartjs-7" class="chartjs" width="undefined" height="undefined"></canvas>
-                            <script>
-                                new Chart(document.getElementById("chartjs-7"), {
-                                    "type": "line",
-                                    "data": {
-                                        "labels": ["January", "February", "March", "April"],
-                                        "datasets": [{
-                                            "label": "Page Impressions",
-                                            "data": [10, 20, 15, 40],
-                                            "borderColor": "rgb(255, 99, 132)",
-                                            "backgroundColor": "rgba(255, 99, 132, 0.2)"
-                                        }, {
-                                            "label": "Adsense Clicks",
-                                            "data": [5, 15, 20, 30],
-                                            "type": "line",
-                                            "fill": false,
-                                            "borderColor": "rgb(54, 162, 235)"
-                                        }]
-                                    },
-                                    "options": {
-                                        "scales": {
-                                            "yAxes": [{
-                                                "ticks": {
-                                                    "beginAtZero": true
-                                                }
+                    <div class="firstChart">
+
+                        <div class="bg-white border-transparent rounded-lg shadow-xl">
+                            <div
+                                class="bg-white from-gray-300 to-gray-100 uppercase text-gray-800 border-b-2 border-gray-300 rounded-tl-lg rounded-tr-lg p-2">
+                                <h class="font-bold uppercase text-gray-600">Graph</h>
+                            </div>
+                            <div class="p-5">
+                                <canvas id="chartjs-7" class="chartjs" width="undefined" height="undefined"></canvas>
+                                <script>
+                                    new Chart(document.getElementById("chartjs-7"), {
+                                        "type": "line",
+                                        "data": {
+                                            "labels": ["January", "February", "March", "April"],
+                                            "datasets": [{
+                                                "label": "Page Impressions",
+                                                "data": [10, 20, 15, 40],
+                                                "borderColor": "rgb(255, 99, 132)",
+                                                "backgroundColor": "rgba(255, 99, 132, 0.2)"
+                                            }, {
+                                                "label": "Adsense Clicks",
+                                                "data": [5, 15, 20, 30],
+                                                "type": "line",
+                                                "fill": false,
+                                                "borderColor": "rgb(54, 162, 235)"
                                             }]
+                                        },
+                                        "options": {
+                                            "scales": {
+                                                "yAxes": [{
+                                                    "ticks": {
+                                                        "beginAtZero": true
+                                                    }
+                                                }]
+                                            }
                                         }
-                                    }
-                                });
-                            </script>
+                                    });
+                                </script>
+                            </div>
                         </div>
+
                     </div>
-                  
-                </div>
 
-                <div id="chartContainer" class="secondChart"></div>
-               
+                    <div id="chartContainer" class="secondChart"></div>
+
         </section>
-
-        
     </div>
-</main>
 
-
-
-
-<script>
-    /*Toggle dropdown list*/
-    function toggleDD(myDropMenu) {
-        document.getElementById(myDropMenu).classList.toggle("invisible");
-    }
-    /*Filter dropdown options*/
-    function filterDD(myDropMenu, myDropMenuSearch) {
-        var input, filter, ul, li, a, i;
-        input = document.getElementById(myDropMenuSearch);
-        filter = input.value.toUpperCase();
-        div = document.getElementById(myDropMenu);
-        a = div.getElementsByTagName("a");
-        for (i = 0; i < a.length; i++) {
-            if (a[i].innerHTML.toUpperCase().indexOf(filter) > -1) {
-                a[i].style.display = "";
-            } else {
-                a[i].style.display = "none";
-            }
+    <script>
+        /*Toggle dropdown list*/
+        function toggleDD(myDropMenu) {
+            document.getElementById(myDropMenu).classList.toggle("invisible");
         }
-    }
-    // Close the dropdown menu if the user clicks outside of it
-    window.onclick = function(event) {
-        if (!event.target.matches('.drop-button') && !event.target.matches('.drop-search')) {
-            var dropdowns = document.getElementsByClassName("dropdownlist");
-            for (var i = 0; i < dropdowns.length; i++) {
-                var openDropdown = dropdowns[i];
-                if (!openDropdown.classList.contains('invisible')) {
-                    openDropdown.classList.add('invisible');
+        /*Filter dropdown options*/
+        function filterDD(myDropMenu, myDropMenuSearch) {
+            var input, filter, ul, li, a, i;
+            input = document.getElementById(myDropMenuSearch);
+            filter = input.value.toUpperCase();
+            div = document.getElementById(myDropMenu);
+            a = div.getElementsByTagName("a");
+            for (i = 0; i < a.length; i++) {
+                if (a[i].innerHTML.toUpperCase().indexOf(filter) > -1) {
+                    a[i].style.display = "";
+                } else {
+                    a[i].style.display = "none";
                 }
             }
         }
-    }
+        // Close the dropdown menu if the user clicks outside of it
+        window.onclick = function (event) {
+            if (
+                !event.target.matches(".drop-button") &&
+                !event.target.matches(".drop-search")
+            ) {
+                var dropdowns = document.getElementsByClassName("dropdownlist");
+                for (var i = 0; i < dropdowns.length; i++) {
+                    var openDropdown = dropdowns[i];
+                    if (!openDropdown.classList.contains("invisible")) {
+                        openDropdown.classList.add("invisible");
+                    }
+                }
+            }
+        };
 
-    // for acrodion
-    var accordElement = document.getElementsByClassName("accordion");
-        
-    for (i = 0; i < accordElement.length; i++) {
-      accordElement[i].addEventListener("click", function() {
-        this.classList.toggle("active");
-        var panel = this.nextElementSibling;
-        if (panel.style.display === "block") {
-          panel.style.display = "none";
-        } else {
-          panel.style.display = "block";
+        // for acrodion
+        var accordElement = document.getElementsByClassName("accordion");
+
+        for (i = 0; i < accordElement.length; i++) {
+            accordElement[i].addEventListener("click", function () {
+                this.classList.toggle("active");
+                var panel = this.nextElementSibling;
+                if (panel.style.display === "block") {
+                    panel.style.display = "none";
+                } else {
+                    panel.style.display = "block";
+                }
+            });
         }
-      });
-    }
+    </script>
 
-    
-</script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/1.6.4/flowbite.min.js"></script>
 
-
-<script type="text/javascript" src="https://canvasjs.com/assets/script/canvasjs.min.js"></script>
-
+    <script type="text/javascript" src="https://canvasjs.com/assets/script/canvasjs.min.js"></script>
 </body>
 
 </html>
