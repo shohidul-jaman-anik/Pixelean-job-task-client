@@ -44,7 +44,7 @@
   padding: 10px 50px;
   border-radius: 10px;
   color: white;
-  margin-top: 4px;
+  margin-top: 5px;
 }
 .accrodianImg {
   height: 2rem;
@@ -118,7 +118,8 @@
     margin: 0% !important;
     font-size: medium !important;
     white-space: nowrap;
-  }.bodyHeader {
+  }
+  .bodyHeader {
     padding: 0%;
     margin-top: 18%;
   }
@@ -128,4 +129,13 @@
     margin: 0%;
     margin-top: 12px;
   }
+}
+@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) {
+  .firstChart {
+    width: 99%;
+  }
+  .secondChart {
+    width: 99%;
+  }
+ 
 }
