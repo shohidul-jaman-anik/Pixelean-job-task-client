@@ -53,9 +53,6 @@
   padding-left: 5px;
 }
 
-.navlink {
-}
-
 @media only screen and (max-width: 600px) {
   .cartComponent {
     display: grid !important;
@@ -73,7 +70,7 @@
   .navRoute {
     display: none;
   }
-  
+
   .card {
     width: 100%;
     height: 9rem;
@@ -85,13 +82,28 @@
     margin: 0%;
     margin-top: 12px;
   }
-  .navHead{
+  .navHead {
     margin: 0% !important;
     font-size: small !important;
     white-space: nowrap;
   }
-
+  .bodyHeader {
+    padding: 0%;
+    margin: 0%;
+  }
+  .chartContainer {
+    width: 100%;
+  }
+  .firstChart {
+    width: 99%;
+  }
+  .secondChart {
+    width: 99%;
+  }
   body {
     overflow-x: hidden !important;
+
+    -ms-overflow-style: none; /* IE and Edge */
+    scrollbar-width: none;
   }
 }
