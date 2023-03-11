@@ -102,7 +102,6 @@
   }
   body {
     overflow-x: hidden !important;
-
     -ms-overflow-style: none; /* IE and Edge */
     scrollbar-width: none;
   }
@@ -129,6 +128,7 @@
     margin: 0%;
     margin-top: 12px;
   }
+  
 }
 @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) {
   .firstChart {
